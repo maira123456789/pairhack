@@ -1,8 +1,16 @@
-import './App.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Routing from "./Routing";
 
 function App() {
-  return ( <h1>hello</h1>
-
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routing />
+      <Footer />
+    </BrowserRouter>
   );
 }
 
