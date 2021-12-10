@@ -1,0 +1,23 @@
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100%;
+    background-color: lightgray;
+    height: 150px;
+}
+
+.footer{
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.footer2{
+    display: flex;
+    flex-direction: column;
+}
+.contacts{
+    display: flex;
+    justify-content: center;
+}
+
