@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router";
+import { Route, Routes, Navigate} from "react-router";
 import Auth from "./components/Auth/Auth";
 import BrandsList from "./components/BrandsList/BrandsList";
 import Cart from "./components/Cart/Cart";
@@ -7,10 +7,13 @@ import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 import EditProduct from "./components/EditProduct/EditProduct";
 import Home from "./components/Home/Home";
 import ProductsList from "./components/ProductsList/ProductsList";
+import { useAuth } from "./context/authContext";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
 
 const Routing = () => {
+  const {user} = useAuth()
+
   let PUBLIC_ROUTES = [
     {
       link: "/",
@@ -60,9 +63,9 @@ const Routing = () => {
       {PUBLIC_ROUTES.map((item) => (
         <Route path={item.link} element={item.element} />
       ))}
-      {ADMIN_ROUTES.map((item) => (
-        <Route path={item.link} element={item.element} />
-      ))}
+      {user? ADMIN_ROUTES.map((item) => (
+        <Route path={item.link} element={ user.email === "tarieltairov1@gmail.com" ? item.element : <Navigate replace to="*" />} />
+      )): null}
       <Route path="*" element={<Error404/>}/>
     </Routes>
   );

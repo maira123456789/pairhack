@@ -1,9 +1,14 @@
 import React from 'react';
+import { useAuth } from '../../context/authContext';
+import Home from '../Home/Home';
+import Login from './Login';
 
 const Auth = () => {
+    const {user} = useAuth()
+
     return (
         <div>
-            Auth
+           {user ? <Home /> : <Login />}
         </div>
     );
 };
