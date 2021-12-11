@@ -6,6 +6,7 @@ import { useAuth } from "../../context/authContext";
 import { Badge } from "@mui/material";
 
 const Header = () => {
+  
   const location = useLocation();
 
   const {
