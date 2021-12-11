@@ -34,5 +34,34 @@
     border-bottom: 1px solid white;
 }
 
+.sign-btn{
+  cursor: pointer;
+  border: 1px gray solid;
+  display: inline-block;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 20px;
+  margin: 10px 20px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #e7ecb2 0%, #dac340 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+
+.sign-btn:hover{
+  background-position: right center;
+}
+
+.cart{
+  color: black;
+}
+.cart:hover{  
+color: cornsilk ;
+}
 
 
