@@ -1,0 +1,146 @@
+{
+  "products": [
+    {
+      "brand": "Hermes",
+      "model": "Terre d'Hermes",
+      "description": "The strength of vetiver mixed with the vitality of the Sichuan pepper and green bergamot. Light, shockproof rubber now clothes the Terre d'Hermes bottle.",
+      "price": 96,
+      "image1": "https://cdn2.lazimbana.com/product/2020/09/12/2788806/terre-d-hermes-edt-100ml-1-1599920313.jpg",
+      "image2": "https://avatars.mds.yandex.net/get-zen_doc/3985451/pub_5f85cbefae6a9712bff9d10d_5f85cc819cd6237d3003ecf2/scale_1200",
+      "male": "men",
+      "id": 1
+    },
+    {
+      "brand": "Paco Rabanne",
+      "model": "1 Million",
+      "description": "How to be the 1 Million among Millions?  Be confident with your style. Do not be afraid to be outrageous. Be brave enough to be too much. To be 1 MILLION. Sun-drenched leather with salty effects. A warm deliberate scent on the edge of the extreme.",
+      "price": 77,
+      "image1": "https://images.ua.prom.st/2413186661_w640_h640_paco-rabanne-1.jpg",
+      "image2": "https://helloparfum.ru/images/thumbnails/1100/900/detailed/14/59822.jpg",
+      "male": "men",
+      "id": 2
+    },
+    {
+      "brand": "Hugo Boss",
+      "model": "Boss Bottled",
+      "description": "Combining elegance and style, BOSS Bottled is designed for the modern man with its vibrantly fresh and sensuous notes. This fragrance features a fruity top note, a warm, spicy heart and base note of sandalwood, cedar and vetiver.",
+      "price": 90,
+      "image1": "https://i.ebayimg.com/00/s/ODAwWDY5NA==/z/TGEAAOSwR2ZcZ5mF/$_57.JPG?set_id=8800005007",
+      "image2": "https://myparfume.ru/upload/iblock/01a/2itioulznrwv7phu4j64yi6cgehog1o6.jpg",
+      "male": "men",
+      "id": 3
+    },
+    {
+      "brand": "Jean Paul Gaultier",
+      "model": "Le Male",
+      "description": "Le Male Le Parfum was created by Quentin Bisch and Nathalie Gracia-Cetto. Top note is Cardamom; middle notes are Lavender and iris; base notes are Vanilla, Oriental notes and Woodsy Notes.",
+      "price": 75,
+      "image1": "https://parfumplus.ru/upload/iblock/68c/68c7aeef41ed1df631cebf704ac62b53.jpg",
+      "image2": "https://odlewkiperfum.pl/22779-thickbox_default/jean-paul-gaultier-le-male.jpg",
+      "male": "men",
+      "id": 4
+    },
+    {
+      "brand": "Tom Ford",
+      "model": "Signature Noir Anthracite",
+      "description": "The nose behind this fragrance is Honorine Blanc. Top notes are Sichuan Pepper, Ginger and Bergamot; middle notes are Spices, Galbanum and Jasmine; base notes are Ebony, Cedar, Birch, Leather, Sandalwood, Patchouli and Amberwood.",
+      "price": 122,
+      "image1": "https://www.elitebs.ru/image/cache/catalog/manfragrance/8/196445855-tom-ford-noir-anthracite-parfyumirovannaya-voda-sprej-sn-1200x800.jpg",
+      "image2": "https://s.cdnsbn.com/images/products/xl/21664698005-2.jpg",
+      "male": "men",
+      "id": 5
+    },
+    {
+      "brand": "Givenchy",
+      "model": "Gentlemen Only Casual Chic",
+      "description": "Elegant and spicy composition includes warm cardamom, fresh ginger and juniper, heart notes reveal tranquil woody accents of birch and white cedar, combined with lavender and mint. Final notes are oriental sandalwood, ambroksan, vanilla and vetiver.",
+      "price": "79",
+      "image1": "https://www.aroma-butik.ru/images/categories/goods_full/1537809221_24852_Givenchy_Parfum_e.jpg",
+      "image2": "http://1.bp.blogspot.com/-FYkXfZlL9HQ/VYEoIjejUlI/AAAAAAAACGU/GEratsfqq3I/s1600/gentlemen%2Bonly.jpg",
+      "male": "men",
+      "id": 6
+    },
+    {
+      "brand": "Chanel",
+      "model": "Allure Homme Sport",
+      "description": "A vivacious, energizing fragrance spiked with heightened notes of freshness and sensuality. For the man who loves the great outdoors and lives his life with style.",
+      "price": 137,
+      "image1": "https://pompadoo.ru/media/uploads/products/10523_AzYUkKO.jpg",
+      "image2": "https://images.ru.prom.st/554993339_w640_h640_chanel-chanel-tualetnaya.jpg",
+      "male": "men",
+      "id": 7
+    },
+    {
+      "brand": "Jo Malone",
+      "model": "English Pear & Freesia Cologne",
+      "description": "The sensuous freshness of just-ripe pears is wrapped in a bouquet of white freesias and mellowed by amber, patchouli and woods. King William pear opens the scent. An unusual, innovative ingredient, this accord of mellow scented fruit is fresh and ripe with a juicy facet.",
+      "price": 137,
+      "image1": "https://cdn.usmall.ru/204/09/01/9e13b1e31b8059af2f96695dbbbce678.jpeg",
+      "image2": "https://www.shopeva.com/PreOrder/images/pic/5100943_0.jpg",
+      "male": "women",
+      "id": 8
+    },
+    {
+      "brand": "Chanel",
+      "model": "Coco Mademoiselle Eau De Parfum Spray",
+      "description": "If you grew up admiring your mom's Chanel No. 5 perfume on her vanity, try this equally enviable bottle. With notes of orange, jasmine, rose, and vanilla, Coco Mademoiselle is a modern classic.",
+      "price": 108,
+      "image1": "https://images.by.prom.st/103936323_w640_h640_parfyumirovannaya-voda-chanel.jpg",
+      "image2": "http://static.galerieslafayette.com/media/530/53035211/G_53035211_378_VFP_1.jpg",
+      "male": "women",
+      "id": 9
+    },
+    {
+      "brand": "Victor & Rolf",
+      "model": "Flowerbomb",
+      "description": "This cult-favorite Viktor & Rolf fragrance has earned its 'most popular' status. Shaped like a grenade, this perfume explodes with the super feminine, warm floral scent of jasmine, freesia, and rose in a single spritz.",
+      "price": 85,
+      "image1": "https://a.cdnsbn.com/images/products/04637290606.jpg",
+      "image2": "https://www.p-shik.ru/images/image/flowerbomb.jpg",
+      "male": "women",
+      "id": 10
+    }
+  ],
+  "brands": [
+    {
+      "brand": "Hermes",
+      "logo": "https://avatars.mds.yandex.net/get-zen_doc/1671180/pub_600c31e241733326eb002c9b_600c33a941733326eb03963d/scale_1200",
+      "id": 1
+    },
+    {
+      "brand": "Paco Rabanne",
+      "logo": "https://a.lmcdn.ru/pi/brands/pacorabanne.jpg",
+      "id": 2
+    },
+    {
+      "brand": "Hugo Boss",
+      "logo": "https://www.giftsgifts.ru/upload/uf/0cd/0cd1888b86fdfe7f5b7f4b1716038caf.jpg",
+      "id": 3
+    },
+    {
+      "brand": "Jean Paul Gaultier",
+      "logo": "https://www.logolynx.com/images/logolynx/8e/8efb3678d034dd67837b0a1aa1a61a98.jpeg",
+      "id": 4
+    },
+    {
+      "brand": "Tom Ford",
+      "logo": "https://gde-ochki.ru/wp-content/uploads/2019/10/tom-ford.png",
+      "id": 5
+    },
+    {
+      "brand": "Givenchy",
+      "logo": "https://ffwallpaper.com/wallup/givenchy/givenchy-15.jpg",
+      "id": 6
+    },
+    {
+      "brand": "Chanel",
+      "logo": "https://shopotam.com/image-bundle/uploads/logo/1/5/9/159.jpg",
+      "id": 7
+    },
+    {
+      "brand": "Jo Malone",
+      "logo": "https://cdn.shopify.com/s/files/1/0910/0818/collections/Joe-Malone-Cologne-Colonia-Perfumes-Parfumes-FragranceOutlet.com-Best-Prices-Discounts.jpg?v=1563413821",
+      "id": 8
+    }
+  ]
+}
