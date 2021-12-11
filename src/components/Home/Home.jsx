@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import "./Home.css";
 
 const Home = () => {
-    return (
-        <div>
-            Home
-        </div>
-    );
+  return (
+    <div>
+      <div className="home-image">
+      </div>
+    </div>
+  );
 };
 
 export default Home;
