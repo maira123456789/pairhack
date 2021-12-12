@@ -27,12 +27,12 @@ const Header = () => {
     },
     {
       title: "STORES",
-      link: "*",
+      link: "/stores",
       id: 3,
     },
     {
       title: "NEWS",
-      link: "*",
+      link: "/news",
       id: 4,
     },
   ];
@@ -73,7 +73,7 @@ const Header = () => {
         </Link>
       ) : null}
       <Link to="/cart">
-        <Badge badgeContent={4} color="secondary">
+        <Badge badgeContent={4} color="warning">
           <ShoppingCartIcon className="cart"  fontSize="large"/>
         </Badge>
       </Link>

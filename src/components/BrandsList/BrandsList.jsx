@@ -1,17 +1,27 @@
-import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+} from "@mui/material";
 import React, { useContext, useEffect } from "react";
+import { useAuth } from "../../context/authContext";
 import { brandsContext } from "../../context/brandsContext";
+import './BrandsList.css'
 
 const BrandsList = () => {
-  const { getBrands, brands } = useContext(brandsContext);
+  const {
+    user: { email }
+  } = useAuth();
+  const { getBrands, brands, deleteBrand } = useContext(brandsContext);
   useEffect(() => {
     getBrands();
   }, []);
   return (
-      <>
-    <div style={{width:"100%", height:"100px"}}></div>
-      <div
-        className="container"
+    <>
+      {/* <div  style={{ width: "100%", height: "100px" }}></div> */}
+      <div className="brands"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -19,7 +29,7 @@ const BrandsList = () => {
         }}
       >
         {brands.map((item) => (
-          <Card sx={{ maxWidth: 205, margin: 3, flexWrap: "wrap" }}>
+          <Card sx={{ maxWidth: 205, margin: 1 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -29,10 +39,15 @@ const BrandsList = () => {
               />
               <CardContent></CardContent>
             </CardActionArea>
+            {email === "tarieltairov1@gmail.com" ? (
+              <Button onClick={()=>deleteBrand(item.id)} size="small" color="primary">
+                Delete
+              </Button>
+            ) : null}
           </Card>
         ))}
       </div>
-      </>
+    </>
   );
 };
 
