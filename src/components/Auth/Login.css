@@ -1,7 +1,7 @@
 .login {
     width: 100%;
     min-height: 90vh;
-    background: #e9e9e9;
+    background: peachpuff;
     display: flex;
   }
   
@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     border: 2px solid #4a4a4a;
-    border-radius: 45px;
+    border-radius: 10px;
   }
   
   .auth-btn {
@@ -23,8 +23,8 @@
     width: 100%;
     padding: 15px 0;
     font-size: 16px;
-    color: #fff;
-    background: gray;
+    color: rgb(255, 255, 255);
+    background: rgb(216, 211, 63);
     cursor: pointer;
     letter-spacing: 2px;
   }
@@ -44,7 +44,7 @@
   }
   
   .error-msg {
-    color: red;
+    color: rgb(203, 19, 19);
     font-size: 16px;
   }
   
@@ -55,7 +55,7 @@
   }
   
   .auth-span {
-    color: blue;
+    color: rgb(162, 158, 43);
     font-weight: 500;
     cursor: pointer;
     margin-left: 5px;

@@ -6,7 +6,9 @@ import Cart from "./components/Cart/Cart";
 import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 import EditProduct from "./components/EditProduct/EditProduct";
 import Home from "./components/Home/Home";
+import News from "./components/News/News";
 import ProductsList from "./components/ProductsList/ProductsList";
+import Stores from "./components/Stores/Stores";
 import { useAuth } from "./context/authContext";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
@@ -45,6 +47,16 @@ const Routing = () => {
       element: <Cart />,
       id: 6,
     },
+    {
+        link:"/stores",
+        element: <Stores/>,
+        id: 7
+    },
+    {
+        link:"/news",
+        element: <News/>,
+        id: 7
+    }
   ];
   const ADMIN_ROUTES = [
     {
