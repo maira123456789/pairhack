@@ -73,10 +73,10 @@ const Routing = () => {
   return (
     <Routes>
       {PUBLIC_ROUTES.map((item) => (
-        <Route path={item.link} element={item.element} />
+        <Route key={item.id} path={item.link} element={item.element} />
       ))}
       {user? ADMIN_ROUTES.map((item) => (
-        <Route path={item.link} element={ user.email === "tarieltairov1@gmail.com" ? item.element : <Navigate replace to="*" />} />
+        <Route key={item.id} path={item.link} element={ user.email === "tarieltairov1@gmail.com" ? item.element : <Navigate replace to="*" />} />
       )): null}
       <Route path="*" element={<Error404/>}/>
     </Routes>
