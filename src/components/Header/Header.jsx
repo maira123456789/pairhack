@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import { useAuth } from "../../context/authContext";
 import { Badge } from "@mui/material";
 
+import { cartContext } from "../../context/cartContext";
 const Header = () => {
-  
+  const { getCart, cartLength } = useContext(cartContext);
+  useEffect(() => {
+    getCart();
+  }, []);
   const location = useLocation();
 
   const {
@@ -47,7 +51,7 @@ const Header = () => {
       </Link>
       {NAV_ITEMS.map((item, index) => (
         <Link
-        key={index}
+          key={index}
           to={item.link}
           style={{ textDecoration: "none" }}
           className={
@@ -74,8 +78,8 @@ const Header = () => {
         </Link>
       ) : null}
       <Link to="/cart">
-        <Badge badgeContent={4} color="warning">
-          <ShoppingCartIcon className="cart"  fontSize="large"/>
+        <Badge badgeContent={+cartLength} color="warning">
+          <ShoppingCartIcon className="cart" fontSize="large" />
         </Badge>
       </Link>
       <div>

@@ -6,9 +6,11 @@ import Routing from "./Routing";
 import AuthContextProvider from "./context/authContext";
 import PerfumesContextProvider from "./context/perfumesContext";
 import BrandsContextProvider from "./context/brandsContext";
+import CartContextProvider from "./context/cartContext";
 function App() {
   return (
     <AuthContextProvider>
+      <CartContextProvider>
         <BrandsContextProvider>
           <PerfumesContextProvider>
             <BrowserRouter>
@@ -18,6 +20,7 @@ function App() {
             </BrowserRouter>
           </PerfumesContextProvider>
         </BrandsContextProvider>
+      </CartContextProvider>
     </AuthContextProvider>
   );
 }

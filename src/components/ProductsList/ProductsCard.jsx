@@ -9,13 +9,15 @@ import {
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import MoreIcon from '@mui/icons-material/More';
-import React, { useContext, useState } from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import MoreIcon from "@mui/icons-material/More";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { perfumesContext } from "../../context/perfumesContext";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import { cartContext } from "../../context/cartContext";
 
 const ProductsCard = ({ item }) => {
   const { deletePerfume } = useContext(perfumesContext);
@@ -28,6 +30,14 @@ const ProductsCard = ({ item }) => {
   function increment() {
     setCount(count + 1);
   }
+
+  const { addProductToCart, checkItemInCart } = useContext(cartContext);
+
+  const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
+
+  useEffect(() => {
+    setCheckInCart(checkItemInCart(item.id));
+  });
 
   return (
     <div>
@@ -51,10 +61,10 @@ const ProductsCard = ({ item }) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions style={{backgroundColor:"peachpuff"}}>
+        <CardActions style={{ backgroundColor: "peachpuff" }}>
           <Link to={`/details/${item.id}`} style={{ textDecoration: "none" }}>
             <Button size="small" color="primary">
-            <MoreIcon/>
+              <MoreIcon />
             </Button>
           </Link>
           <Button size="small" color="primary">
@@ -62,7 +72,9 @@ const ProductsCard = ({ item }) => {
             <FavoriteBorderIcon onClick={increment} />
           </Button>
           <Button>
-            <StarOutlineIcon />
+            <ShoppingCartCheckoutIcon  style={{ color: checkInCart ? "red" : "black", fontSize: "25px" }} onClick={() => {
+            addProductToCart(item);
+            setCheckInCart(checkItemInCart(item.id));}}/>
           </Button>
           {email === "tarieltairov1@gmail.com" ? (
             <Button
@@ -70,13 +82,13 @@ const ProductsCard = ({ item }) => {
               color="primary"
               onClick={() => deletePerfume(item.id)}
             >
-              <DeleteIcon/>
+              <DeleteIcon />
             </Button>
           ) : null}
           {email === "tarieltairov1@gmail.com" ? (
             <Link to={`/edit/${item.id}`} style={{ textDecoration: "none" }}>
               <Button size="small" color="primary">
-                <EditIcon/>
+                <EditIcon />
               </Button>
             </Link>
           ) : null}
