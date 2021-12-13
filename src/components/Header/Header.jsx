@@ -45,8 +45,9 @@ const Header = () => {
           alt="logo"
         />
       </Link>
-      {NAV_ITEMS.map((item) => (
+      {NAV_ITEMS.map((item, index) => (
         <Link
+        key={index}
           to={item.link}
           style={{ textDecoration: "none" }}
           className={
