@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
+      <div className="back">
+        <a onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>BACK TO TOP</a>
+      </div>
       <div className="main-footer">
         <div className="footer">
           <h3>INFORMATION</h3>

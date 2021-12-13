@@ -40,7 +40,7 @@ const BrandsList = () => {
               <CardContent></CardContent>
             </CardActionArea>
             {email === "tarieltairov1@gmail.com" ? (
-              <Button style={{backgroundColor:"peachpuff"}} onClick={()=>deleteBrand(item.id)} size="small" color="primary">
+              <Button style={{backgroundColor:"peachpuff",color:"black"}} onClick={()=>deleteBrand(item.id)} size="small" color="primary">
                 Delete
               </Button>
             ) : null}

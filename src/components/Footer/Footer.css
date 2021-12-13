@@ -21,3 +21,10 @@
     justify-content: space-around;
 }
 
+.back {
+    display: flex;
+    justify-content: center;
+    background-color: PapayaWhip;
+    margin:3px
+}
+
