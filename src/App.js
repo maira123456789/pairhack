@@ -9,15 +9,15 @@ import BrandsContextProvider from "./context/brandsContext";
 function App() {
   return (
     <AuthContextProvider>
-      <BrandsContextProvider>
-        <PerfumesContextProvider>
-          <BrowserRouter>
-            <Header />
-            <Routing />
-            <Footer />
-          </BrowserRouter>
-        </PerfumesContextProvider>
-      </BrandsContextProvider>
+        <BrandsContextProvider>
+          <PerfumesContextProvider>
+            <BrowserRouter>
+              <Header />
+              <Routing />
+              <Footer />
+            </BrowserRouter>
+          </PerfumesContextProvider>
+        </BrandsContextProvider>
     </AuthContextProvider>
   );
 }

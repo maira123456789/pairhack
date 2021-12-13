@@ -29,7 +29,7 @@ const BrandsList = () => {
         }}
       >
         {brands.map((item) => (
-          <Card sx={{ maxWidth: 205, margin: 1 }}>
+          <Card sx={{ margin:1, width:200, height:200, display:"flex",flexDirection:"column" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -40,7 +40,7 @@ const BrandsList = () => {
               <CardContent></CardContent>
             </CardActionArea>
             {email === "tarieltairov1@gmail.com" ? (
-              <Button onClick={()=>deleteBrand(item.id)} size="small" color="primary">
+              <Button style={{backgroundColor:"peachpuff"}} onClick={()=>deleteBrand(item.id)} size="small" color="primary">
                 Delete
               </Button>
             ) : null}
