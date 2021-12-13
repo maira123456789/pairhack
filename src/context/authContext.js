@@ -5,7 +5,7 @@ export const authContext = createContext();
 
 export const useAuth = ()=>{
   return useContext(authContext)
-}
+}     
 
 
 const AuthContextProvider = ({ children }) => {
@@ -63,6 +63,7 @@ const AuthContextProvider = ({ children }) => {
       });
   };
 
+
   const handleLogout = () => {
     fire.auth().signOut();
   };
@@ -81,6 +82,7 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     authListener();
   }, []);
+
 
   const values = {
     email,

@@ -4,7 +4,7 @@ import Auth from "./components/Auth/Auth";
 import BrandsList from "./components/BrandsList/BrandsList";
 import Cart from "./components/Cart/Cart";
 import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
-import EditProduct from "./components/EditProduct/EditProduct";
+import EditPerfume from "./components/EditPerfume/EditPerfume";
 import Home from "./components/Home/Home";
 import News from "./components/News/News";
 import ProductsList from "./components/ProductsList/ProductsList";
@@ -66,7 +66,7 @@ const Routing = () => {
     },
     {
       link: "/edit/:id",
-      element: <EditProduct />,
+      element: <EditPerfume />,
       id: 2,
     },
   ];

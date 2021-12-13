@@ -4,7 +4,7 @@
       "brand": "Hermes",
       "model": "Terre d'Hermes",
       "description": "The strength of vetiver mixed with the vitality of the Sichuan pepper and green bergamot. Light, shockproof rubber now clothes the Terre d'Hermes bottle.",
-      "price": 96,
+      "price": "85",
       "image1": "https://cdn2.lazimbana.com/product/2020/09/12/2788806/terre-d-hermes-edt-100ml-1-1599920313.jpg",
       "image2": "https://avatars.mds.yandex.net/get-zen_doc/3985451/pub_5f85cbefae6a9712bff9d10d_5f85cc819cd6237d3003ecf2/scale_1200",
       "male": "men",
@@ -14,7 +14,7 @@
       "brand": "Paco Rabanne",
       "model": "1 Million",
       "description": "How to be the 1 Million among Millions?  Be confident with your style. Do not be afraid to be outrageous. Be brave enough to be too much. To be 1 MILLION. Sun-drenched leather with salty effects. A warm deliberate scent on the edge of the extreme.",
-      "price": 77,
+      "price": "100",
       "image1": "https://images.ua.prom.st/2413186661_w640_h640_paco-rabanne-1.jpg",
       "image2": "https://helloparfum.ru/images/thumbnails/1100/900/detailed/14/59822.jpg",
       "male": "men",
@@ -91,14 +91,24 @@
       "id": 9
     },
     {
-      "brand": "Victor & Rolf",
-      "model": "Flowerbomb",
-      "description": "This cult-favorite Viktor & Rolf fragrance has earned its 'most popular' status. Shaped like a grenade, this perfume explodes with the super feminine, warm floral scent of jasmine, freesia, and rose in a single spritz.",
-      "price": 85,
-      "image1": "https://a.cdnsbn.com/images/products/04637290606.jpg",
-      "image2": "https://www.p-shik.ru/images/image/flowerbomb.jpg",
+      "brand": "BAKULYA",
+      "model": "oilknz ",
+      "description": "acsohi'p;z'c,las;mlcq,vs:>X ?Alm",
+      "price": "5112316321",
+      "image1": "cjnkcjoq;als",
+      "image2": "cuskjxncqlkcs",
+      "male": "man",
+      "id": 11
+    },
+    {
+      "brand": "Gucci",
+      "model": "newYear",
+      "description": "first perfume in the world",
+      "price": "800",
+      "image1": "https://u.makeup.com.ua/1/1g/1getnrnuqvyy.jpg",
+      "image2": "https://static.iledebeaute.ru/files/images/tag/part_1/30336/pre/500_500sb.jpg",
       "male": "women",
-      "id": 10
+      "id": 12
     }
   ],
   "brands": [
