@@ -7,23 +7,35 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import React, { useContext } from "react";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import MoreIcon from '@mui/icons-material/More';
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { perfumesContext } from "../../context/perfumesContext";
 
 const ProductsCard = ({ item }) => {
-    const {deletePerfume}=useContext(perfumesContext)
-    const {
-        user: { email },
-      } = useAuth();
+  const { deletePerfume } = useContext(perfumesContext);
+  const {
+    user: { email },
+  } = useAuth();
+
+  const [count, setCount] = useState(0);
+
+  function increment() {
+    setCount(count + 1);
+  }
+
   return (
     <div>
       <Card sx={{ maxWidth: 500, margin: 3 }}>
         <CardActionArea>
           <CardMedia
             component="img"
-            height="200"
+            height="190"
             image={item.image1}
             alt="green iguana"
           />
@@ -39,22 +51,35 @@ const ProductsCard = ({ item }) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Link to={`/details/${item.id}`} style={{textDecoration: 'none'}}>
-          <Button size="small" color="primary">
-            Details
-          </Button>
-          </Link>
-          {email === "tarieltairov1@gmail.com" ? 
-            <Button size="small" color="primary" onClick={()=>deletePerfume(item.id)}>
-              Delete
+        <CardActions style={{backgroundColor:"peachpuff"}}>
+          <Link to={`/details/${item.id}`} style={{ textDecoration: "none" }}>
+            <Button size="small" color="primary">
+            <MoreIcon/>
             </Button>
-           : null}
-          {email === "tarieltairov1@gmail.com" ? 
-            <Link to={`/edit/${item.id}`} style={{textDecoration: 'none'}}><Button size="small" color="primary" >
-              Update
-            </Button></Link>
-           : null}
+          </Link>
+          <Button size="small" color="primary">
+            <h1>{count}</h1>
+            <FavoriteBorderIcon onClick={increment} />
+          </Button>
+          <Button>
+            <StarOutlineIcon />
+          </Button>
+          {email === "tarieltairov1@gmail.com" ? (
+            <Button
+              size="small"
+              color="primary"
+              onClick={() => deletePerfume(item.id)}
+            >
+              <DeleteIcon/>
+            </Button>
+          ) : null}
+          {email === "tarieltairov1@gmail.com" ? (
+            <Link to={`/edit/${item.id}`} style={{ textDecoration: "none" }}>
+              <Button size="small" color="primary">
+                <EditIcon/>
+              </Button>
+            </Link>
+          ) : null}
         </CardActions>
       </Card>
     </div>
