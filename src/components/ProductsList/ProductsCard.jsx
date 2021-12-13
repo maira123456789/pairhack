@@ -40,9 +40,11 @@ const ProductsCard = ({ item }) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
+          <Link to={`/details/${item.id}`} style={{textDecoration: 'none'}}>
           <Button size="small" color="primary">
             Details
           </Button>
+          </Link>
           {email === "tarieltairov1@gmail.com" ? 
             <Button size="small" color="primary" onClick={()=>deletePerfume(item.id)}>
               Delete
