@@ -14,6 +14,7 @@ const Login = () => {
     setHasAccount,
     emailError,
     passwordError,
+    google
   } = useAuth();
   return (
     <>
@@ -77,7 +78,9 @@ const Login = () => {
                 </p>
               </>
             )}
+
           </div>
+          <button onClick={google}> Sign in with google </button>
         </div>
       </section>
     </>

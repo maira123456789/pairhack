@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/app";
 import "firebase/compat/auth";
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyBfzBIvC85gJmLnIFtAY4cOuRs10YMyU7U",
     authDomain: "pair-hack.firebaseapp.com",
@@ -13,3 +14,6 @@ const firebaseConfig = {
 const fire = firebase.initializeApp(firebaseConfig);
 
 export default fire;
+
+
+
