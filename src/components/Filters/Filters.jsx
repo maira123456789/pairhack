@@ -11,20 +11,25 @@ const Filters = ({ brand, setBrand }) => {
 
   return (
     <div style={{ marginTop: "20px" }}>
-      <FormControl fullWidth>
+      <FormControl style={{width: '200px'}}>
         <InputLabel id="demo-simple-select-label">Brand</InputLabel>
         <Select
+          
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={brand}
           label="Brands"
           onChange={(e) => setBrand(e.target.value)}
         >
-          {brands ? brands.map((item) => (
-            <MenuItem value={item.brand} key={item.id}>
-              {item.brand}
-            </MenuItem>
-          )): <h1>loading</h1>}
+          {brands ? (
+            brands.map((item) => (
+              <MenuItem value={item.brand} key={item.id}>
+                {item.brand}
+              </MenuItem>
+            ))
+          ) : (
+            <h1>loading</h1>
+          )}
         </Select>
       </FormControl>
     </div>
