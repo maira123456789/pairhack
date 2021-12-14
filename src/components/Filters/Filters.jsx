@@ -14,7 +14,6 @@ const Filters = ({ brand, setBrand }) => {
       <FormControl style={{width: '200px'}}>
         <InputLabel id="demo-simple-select-label">Brand</InputLabel>
         <Select
-          
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={brand}
@@ -28,7 +27,7 @@ const Filters = ({ brand, setBrand }) => {
               </MenuItem>
             ))
           ) : (
-            <h1>loading</h1>
+            <h1>Loading</h1>
           )}
         </Select>
       </FormControl>

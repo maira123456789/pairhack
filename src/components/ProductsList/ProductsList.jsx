@@ -7,6 +7,8 @@ import { useSearchParams } from "react-router-dom";
 import { Pagination, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Filters from "../Filters/Filters";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import CloseIcon from "@mui/icons-material/Close";
 const ProductsList = () => {
   const { perfumes, getPerfumes, perfumesTotalCount } =
     useContext(perfumesContext);
@@ -29,24 +31,23 @@ const ProductsList = () => {
     searchParams.get("q") ? searchParams.get("q") : ""
   );
 
-  const [brand,setBrand] = useState([])
+  const [brand, setBrand] = useState([]);
 
   useEffect(() => {
     setSearchParams({
       _page: page,
       _limit: limit,
       q: search,
-      brand: brand
-      
+      brand: brand,
     });
   }, []);
-//   console.log(brand);
+  //   console.log(brand);
   useEffect(() => {
     setSearchParams({
       _page: page,
       _limit: limit,
       q: search,
-      brand: brand
+      brand: brand,
     });
   }, [page, limit, search, brand]);
   useEffect(() => {
@@ -55,8 +56,8 @@ const ProductsList = () => {
 
   return (
     <div className="DIV">
-        {/* search */}
-      <div style={{display:"flex",alignItems:"center"}}>
+      {/* search */}
+      <div style={{ display: "flex", alignItems: "center" }}>
         <SearchIcon />
         <TextField
           value={search}
@@ -65,11 +66,9 @@ const ProductsList = () => {
         />
       </div>
       {/* filtration */}
-      <div>
-          <Filters
-          brand={brand}
-          setBrand={setBrand}
-          />
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <FilterListIcon />
+        <Filters brand={brand} setBrand={setBrand} />
       </div>
       <div
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
