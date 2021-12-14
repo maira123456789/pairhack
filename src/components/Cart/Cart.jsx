@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { cartContext } from "../../context/cartContext";
-import 'antd/dist/antd.css';
+
 import { List} from "antd"
 import CartItem from "./CartItem";
 const Cart = () => {

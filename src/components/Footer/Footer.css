@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* margin-top: 40%; */
     background-color: peachpuff;
     height: 200px;
+    flex-wrap: wrap;
 }
 
 .footer{
@@ -28,3 +28,8 @@
     margin:3px
 }
 
+@media all and (max-width: 350px){
+    .footer{
+        display: none;
+    }
+}

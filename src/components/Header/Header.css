@@ -63,5 +63,23 @@
 .cart:hover{  
 color: cornsilk ;
 }
+.cont{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.burger{
+  display: none;
+}
+.links{
+  display: block;
+}
 
-
+@media all and (max-width: 768px){
+  .burger{
+    display: block;
+  }
+  .links{
+    display: none;
+  }
+}

@@ -9,16 +9,17 @@ const Filters = ({ brand, setBrand }) => {
     getBrands();
   }, []);
 
+
   return (
     <div style={{ marginTop: "20px" }}>
       <FormControl style={{width: '200px'}}>
         <InputLabel id="demo-simple-select-label">Brand</InputLabel>
         <Select
-          
+          aria-current
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={brand}
-          label="Brands"
+           label="Brands"
           onChange={(e) => setBrand(e.target.value)}
         >
           {brands ? (

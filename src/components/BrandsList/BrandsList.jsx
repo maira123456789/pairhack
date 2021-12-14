@@ -8,46 +8,53 @@ import {
 import React, { useContext, useEffect } from "react";
 import { useAuth } from "../../context/authContext";
 import { brandsContext } from "../../context/brandsContext";
-import './BrandsList.css'
+import "./BrandsList.css";
 
 const BrandsList = () => {
   const {
-    user: { email }
+    user: { email },
   } = useAuth();
   const { getBrands, brands, deleteBrand } = useContext(brandsContext);
   useEffect(() => {
     getBrands();
   }, []);
   return (
-    <>
-      {/* <div  style={{ width: "100%", height: "100px" }}></div> */}
-      <div className="brands"
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        {brands.map((item) => (
-          <Card sx={{ margin:1, width:200, height:200, display:"flex",flexDirection:"column" }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={item.logo}
-                alt="green iguana"
-              />
-              <CardContent></CardContent>
-            </CardActionArea>
-            {email === "tarieltairov1@gmail.com" ? (
-              <Button style={{backgroundColor:"peachpuff",color:"black"}} onClick={()=>deleteBrand(item.id)} size="small" color="primary">
-                Delete
-              </Button>
-            ) : null}
-          </Card>
-        ))}
-      </div>
-    </>
+    <div
+      className="brands"
+
+    >
+      {brands.map((item) => (
+        <Card
+          sx={{
+            margin: 1,
+            width: 200,
+            height: 200,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={item.logo}
+              alt="green iguana"
+            />
+            <CardContent></CardContent>
+          </CardActionArea>
+          {email === "tarieltairov1@gmail.com" ? (
+            <Button
+              style={{ backgroundColor: "peachpuff", color: "black" }}
+              onClick={() => deleteBrand(item.id)}
+              size="small"
+              color="primary"
+            >
+              Delete
+            </Button>
+          ) : null}
+        </Card>
+      ))}
+    </div>
   );
 };
 
