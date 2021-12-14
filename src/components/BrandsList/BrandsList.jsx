@@ -21,7 +21,6 @@ const BrandsList = () => {
   return (
     <div
       className="brands"
-
     >
       {brands.map((item) => (
         <Card

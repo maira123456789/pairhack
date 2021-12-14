@@ -7,11 +7,10 @@ import {
   formatCreditCardNumber,
   formatCVC,
   formatExpirationDate,
-  formatFormData,
 } from "./utils";
 
 import "react-credit-cards/es/styles-compiled.css";
-import "./Pay.css"
+import "./Pay.css";
 
 export default class App extends React.Component {
   state = {
@@ -23,6 +22,7 @@ export default class App extends React.Component {
     focused: "",
     formData: null,
   };
+
 
   handleCallback = ({ issuer }, isValid) => {
     if (isValid) {
@@ -63,10 +63,18 @@ export default class App extends React.Component {
   };
 
   render() {
-    const { name, number, expiry, cvc, focused, issuer, formData } = this.state;
+    const { name, number, expiry, cvc, focused, issuer } = this.state;
+
+    // function checkValues (state) {
+    //   if (!state.number || !state.name || !state.expiry || !state.cvc) {
+    //     alert("ENTER DATA");
+    //   } else {
+    //     alert("paid");
+    //   }
+    // };
 
     return (
-      <div key="Payment" style={{paddingTop:"111px"}}>
+      <div key="Payment" style={{ paddingTop: "111px" }}>
         <div className="App-payment">
           <div
             style={{
@@ -96,7 +104,7 @@ export default class App extends React.Component {
                   name="number"
                   className="form-control"
                   placeholder="Card Number"
-                  pattern="[\d| ]{16,22}"
+                  // pattern="[\d| ]{16,22}"
                   required
                   onChange={this.handleInputChange}
                   onFocus={this.handleInputFocus}
@@ -142,17 +150,23 @@ export default class App extends React.Component {
               </div>
               <input type="hidden" name="issuer" value={issuer} />
               <div className="form-actions">
-                <button onClick={()=>alert("Оплачено")} className="btn-pay">PAY</button>
+                <button
+                  // onClick={checkValues}
+                  type="submit"
+                  className="btn-pay"
+                >
+                  PAYYY
+                </button>
               </div>
             </form>
           </div>
-          {formData && (
+          {/* {formData && (
             <div className="App-highlight">
               {formatFormData(formData).map((d, i) => (
                 <div key={i}>{d}</div>
               ))}
             </div>
-          )}
+          )} */}
           <hr style={{ margin: "30px 0" }} />
           <SupportedCards />
         </div>

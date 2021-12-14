@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { perfumesContext } from "../../context/perfumesContext";
 import ProductsCard from "./ProductsCard";
 import ErrorIcon from "@mui/icons-material/Error";
@@ -11,6 +12,8 @@ import { Pagination } from "antd";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import CloseIcon from "@mui/icons-material/Close";
 const ProductsList = () => {
+  const navigate = useNavigate();
+
   const { perfumes, getPerfumes, perfumesTotalCount } =
     useContext(perfumesContext);
   useEffect(() => {
@@ -27,12 +30,11 @@ const ProductsList = () => {
     searchParams.get("_limit") ? searchParams.get("_limit") : 4
   );
 
-
   const [search, setSearch] = useState(
-    searchParams.get("q")  ? searchParams.get("q"): ''
+    searchParams.get("q") ? searchParams.get("q") : ""
   );
 
-  const [brand, setBrand] = useState([])
+  const [brand, setBrand] = useState([]);
 
   useEffect(() => {
     setSearchParams({
@@ -50,7 +52,7 @@ const ProductsList = () => {
       q: search,
       brand: brand,
     });
-  }, [ search, page, limit, brand]);
+  }, [search, page, limit, brand]);
 
   useEffect(() => {
     getPerfumes();
@@ -80,6 +82,7 @@ const ProductsList = () => {
       <div style={{ display: "flex", alignItems: "center" }}>
         <FilterListIcon />
         <Filters brand={brand} setBrand={setBrand} />
+        <Link to="/products?_limit=4&_page=1&q="><CloseIcon/></Link>
       </div>
       <div
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
@@ -91,9 +94,7 @@ const ProductsList = () => {
         )}
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-
         <Pagination
-        
           onChange={(page, limit) => {
             setPage(page);
             setLimit(limit);
@@ -101,7 +102,7 @@ const ProductsList = () => {
           current={+page}
           pageSize={+limit}
           defaultCurrent={1}
-          total={+perfumesTotalCount} 
+          total={+perfumesTotalCount}
         />
       </div>
     </div>
