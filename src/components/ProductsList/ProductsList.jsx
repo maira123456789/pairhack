@@ -8,6 +8,8 @@ import { TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Filters from "../Filters/Filters";
 import { Pagination } from "antd";
+import FilterListIcon from "@mui/icons-material/FilterList";
+import CloseIcon from "@mui/icons-material/Close";
 const ProductsList = () => {
   const { perfumes, getPerfumes, perfumesTotalCount } =
     useContext(perfumesContext);
@@ -32,21 +34,21 @@ const ProductsList = () => {
 
   const [brand, setBrand] = useState([])
 
-  // useEffect(() => {
-  //   setSearchParams({
-  //     q: search,
-  //     _page: page,
-  //     _limit: limit,
-  //     brand: brand
-  //   });
-  // }, []);
-
   useEffect(() => {
     setSearchParams({
       q: search,
       _page: page,
       _limit: limit,
-      brand: brand
+      brand: brand,
+    });
+  }, []);
+  //   console.log(brand);
+  useEffect(() => {
+    setSearchParams({
+      _page: page,
+      _limit: limit,
+      q: search,
+      brand: brand,
     });
   }, [ search, page, limit, brand]);
 
@@ -65,8 +67,8 @@ const ProductsList = () => {
 
   return (
     <div className="DIV">
-        {/* search */}
-      <div style={{display:"flex",alignItems:"center"}}>
+      {/* search */}
+      <div style={{ display: "flex", alignItems: "center" }}>
         <SearchIcon />
         <TextField
           value={search}
@@ -75,11 +77,9 @@ const ProductsList = () => {
         />
       </div>
       {/* filtration */}
-      <div>
-          <Filters
-          brand={brand}
-          setBrand={setBrand}
-          />
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <FilterListIcon />
+        <Filters brand={brand} setBrand={setBrand} />
       </div>
       <div
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}

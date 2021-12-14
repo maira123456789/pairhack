@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Navigate} from "react-router";
+import { Route, Routes, Navigate } from "react-router";
 import Auth from "./components/Auth/Auth";
 import BrandsList from "./components/BrandsList/BrandsList";
 import Cart from "./components/Cart/Cart";
@@ -7,6 +7,7 @@ import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 import EditPerfume from "./components/EditPerfume/EditPerfume";
 import Home from "./components/Home/Home";
 import News from "./components/News/News";
+import Pay from "./components/Pay/Pay";
 import ProductsList from "./components/ProductsList/ProductsList";
 import Stores from "./components/Stores/Stores";
 import { useAuth } from "./context/authContext";
@@ -14,7 +15,7 @@ import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
 
 const Routing = () => {
-  const {user} = useAuth()
+  const { user } = useAuth();
 
   let PUBLIC_ROUTES = [
     {
@@ -48,15 +49,20 @@ const Routing = () => {
       id: 6,
     },
     {
-        link:"/stores",
-        element: <Stores/>,
-        id: 7
+      link: "/stores",
+      element: <Stores />,
+      id: 7,
     },
     {
-        link:"/news",
-        element: <News/>,
-        id: 7
-    }
+      link: "/news",
+      element: <News />,
+      id: 7,
+    },
+    {
+      link: "/pay",
+      element: <Pay />,
+      id: 8
+    },
   ];
   const ADMIN_ROUTES = [
     {
@@ -75,10 +81,22 @@ const Routing = () => {
       {PUBLIC_ROUTES.map((item) => (
         <Route key={item.id} path={item.link} element={item.element} />
       ))}
-      {user? ADMIN_ROUTES.map((item) => (
-        <Route key={item.id} path={item.link} element={ user.email === "tarieltairov1@gmail.com" ? item.element : <Navigate replace to="*" />} />
-      )): null}
-      <Route path="*" element={<Error404/>}/>
+      {user
+        ? ADMIN_ROUTES.map((item) => (
+            <Route
+              key={item.id}
+              path={item.link}
+              element={
+                user.email === "tarieltairov1@gmail.com" ? (
+                  item.element
+                ) : (
+                  <Navigate replace to="*" />
+                )
+              }
+            />
+          ))
+        : null}
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 };
