@@ -7,6 +7,7 @@ import AuthContextProvider from "./context/authContext";
 import PerfumesContextProvider from "./context/perfumesContext";
 import BrandsContextProvider from "./context/brandsContext";
 import CartContextProvider from "./context/cartContext";
+import 'antd/dist/antd.css';
 function App() {
   return (
     <AuthContextProvider>

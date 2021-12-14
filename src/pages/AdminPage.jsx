@@ -98,13 +98,15 @@ const AdminPage = () => {
         <Button onClick={handleOpen} variant="contained" style={{backgroundColor:"honeydew",color:"black"}}>
           Add Perfume
         </Button>
-        <Modal
+        <Modal 
+         
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box className="modal" sx={style}>
+            <div className="items-list">
             <h1>Add Perfumes</h1>
             <TextField
               label="Enter brand"
@@ -163,6 +165,7 @@ const AdminPage = () => {
             >
               Add
             </Button>
+            </div>
           </Box>
         </Modal>
       </div>
@@ -170,13 +173,14 @@ const AdminPage = () => {
         <Button onClick={handleOpenBrand} variant="contained" style={{backgroundColor:"mistyrose",color:"black"}}>
           Add Brand
         </Button>
-        <Modal
+        <Modal 
           open={openBrand}
           onClose={handleCloseBrand}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box className="modal" sx={style}>
+          <div className="items-list">
             <h1>Add Brand</h1>
             <TextField
               label="Enter brand"
@@ -199,6 +203,7 @@ const AdminPage = () => {
             >
               Add
             </Button>
+            </div>
           </Box>
         </Modal>
       </div>

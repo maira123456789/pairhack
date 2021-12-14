@@ -4,9 +4,10 @@ import ProductsCard from "./ProductsCard";
 import ErrorIcon from "@mui/icons-material/Error";
 import "./ProductList.css";
 import { useSearchParams } from "react-router-dom";
-import { Pagination, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Filters from "../Filters/Filters";
+import { Pagination } from "antd";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import CloseIcon from "@mui/icons-material/Close";
 const ProductsList = () => {
@@ -22,22 +23,22 @@ const ProductsList = () => {
     searchParams.get("_page") ? searchParams.get("_page") : 1
   );
 
-  const [limit, setLimit] = useState(4);
-
-  const pageCount = Math.ceil(perfumesTotalCount / limit);
-  console.log(searchParams.get("_limit"));
-
-  const [search, setSearch] = useState(
-    searchParams.get("q") ? searchParams.get("q") : ""
+  const [limit, setLimit] = useState(
+    searchParams.get("_limit") ? searchParams.get("_limit") : 4
   );
 
-  const [brand, setBrand] = useState([]);
+
+  const [search, setSearch] = useState(
+    searchParams.get("q")  ? searchParams.get("q"): ''
+  );
+
+  const [brand, setBrand] = useState([])
 
   useEffect(() => {
     setSearchParams({
+      q: search,
       _page: page,
       _limit: limit,
-      q: search,
       brand: brand,
     });
   }, []);
@@ -49,10 +50,20 @@ const ProductsList = () => {
       q: search,
       brand: brand,
     });
-  }, [page, limit, search, brand]);
+  }, [ search, page, limit, brand]);
+
   useEffect(() => {
     getPerfumes();
   }, [searchParams]);
+  // useEffect(() => {
+  //   setSearchParams({
+  //     q: search,
+  //     _page: page,
+  //     _limit: limit,
+  //     brand: brand
+  //   });
+  //   getPerfumes();
+  // }, []);
 
   return (
     <div className="DIV">
@@ -80,16 +91,17 @@ const ProductsList = () => {
         )}
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
+
         <Pagination
-          onChange={(event, page) => {
+        
+          onChange={(page, limit) => {
             setPage(page);
+            setLimit(limit);
           }}
-          page={+page}
+          current={+page}
           pageSize={+limit}
-          defaultPage={1}
-          count={+pageCount}
-          color="warning"
-          //   variant="outlined"
+          defaultCurrent={1}
+          total={+perfumesTotalCount} 
         />
       </div>
     </div>

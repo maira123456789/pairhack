@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import MoreIcon from "@mui/icons-material/More";
@@ -41,7 +40,7 @@ const ProductsCard = ({ item }) => {
 
   return (
     <div>
-      <Card sx={{ maxWidth: 500, margin: 3 }}>
+      <Card sx={{ maxWidth: 300, margin: 1 }}>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -67,15 +66,28 @@ const ProductsCard = ({ item }) => {
               <MoreIcon />
             </Button>
           </Link>
-          <Button size="small" color="primary">
-            <h1>{count}</h1>
-            <FavoriteBorderIcon onClick={increment} />
-          </Button>
-          <Button>
-            <ShoppingCartCheckoutIcon  style={{ color: checkInCart ? "red" : "black", fontSize: "25px" }} onClick={() => {
-            addProductToCart(item);
-            setCheckInCart(checkItemInCart(item.id));}}/>
-          </Button>
+
+          {email ? (
+            <>
+              <Button>
+                <ShoppingCartCheckoutIcon
+                  style={{
+                    color: checkInCart ? "red" : "black",
+                    fontSize: "25px",
+                  }}
+                  onClick={() => {
+                    addProductToCart(item);
+                    setCheckInCart(checkItemInCart(item.id));
+                  }}
+                />
+              </Button>
+              <Button size="small" color="primary">
+                <h1>{count}</h1>
+                <FavoriteBorderIcon onClick={increment} />
+              </Button>
+            </>
+          ) : null}
+
           {email === "tarieltairov1@gmail.com" ? (
             <Button
               size="small"
