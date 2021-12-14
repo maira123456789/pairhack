@@ -142,7 +142,7 @@ export default class App extends React.Component {
               </div>
               <input type="hidden" name="issuer" value={issuer} />
               <div className="form-actions">
-                <button className="btn-pay">PAY</button>
+                <button onClick={()=>alert("Оплачено")} className="btn-pay">PAY</button>
               </div>
             </form>
           </div>

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { perfumesContext } from '../../context/perfumesContext';
+import './DetailsProduct.css'
 
 const DetailsProduct = () => {
     const { id } = useParams();
@@ -18,7 +19,7 @@ const DetailsProduct = () => {
             {perfume?(
                 <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexWrap: 'wrap'}}>
                 <div>
-                    <img width="400px" src={perfume.image2} alt="" />
+                    <img className="details-img" width="400px" src={perfume.image2} alt="" />
                 </div>
                 <div style={{display: "flex", flexDirection: 'column', justifyContent: 'space-between', height:'300px'}}>
                     <h1>{perfume.brand}</h1>
