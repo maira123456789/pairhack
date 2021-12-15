@@ -171,11 +171,11 @@ const Header = () => {
         </Link>
       ) : null}</div>
 
-      <Link to="/cart">
+      {email?<Link to="/cart">
         <Badge badgeContent={+cartLength} color="warning">
           <ShoppingCartIcon className="cart" fontSize="large" />
         </Badge>
-      </Link>
+      </Link>: null}
       <div>
         {email ? (
           <Link to="/auth">

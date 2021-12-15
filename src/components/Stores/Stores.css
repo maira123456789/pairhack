@@ -1,6 +1,6 @@
 .stores {
-    background: url("https://images.ru.prom.st/313762114_w640_h640_fotooboi-poberezhe-368h254.jpg");
-    background-size: cover;
+    /* background: url("https://images.ru.prom.st/313762114_w640_h640_fotooboi-poberezhe-368h254.jpg");
+    background-size: cover; */
     height: 900px;
     display: flex;
     justify-content:center;
