@@ -11,7 +11,7 @@ const Cart = () => {
     getCart();
   }, []);
   return (
-    <div style={{ paddingTop: "100px", marginBottom: "50px" }}>
+    <div style={{ paddingTop: "100px", marginBottom: "50px"}}>
       <List
         itemLayout="vertical"
         size="large"

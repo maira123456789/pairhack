@@ -11,6 +11,7 @@ import {
 
 import "react-credit-cards/es/styles-compiled.css";
 import "./Pay.css";
+import { Link } from "react-router-dom";
 
 export default class App extends React.Component {
   state = {
@@ -150,13 +151,14 @@ export default class App extends React.Component {
               </div>
               <input type="hidden" name="issuer" value={issuer} />
               <div className="form-actions">
+                <Link to="/invoic">
                 <button
-                  // onClick={checkValues}
                   type="submit"
                   className="btn-pay"
                 >
                   PAYYY
                 </button>
+                </Link>
               </div>
             </form>
           </div>
