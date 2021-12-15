@@ -6,7 +6,6 @@ import { Button, List } from "antd";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 const Cart = () => {
-
   const { getCart, cart } = useContext(cartContext);
   useEffect(() => {
     getCart();
@@ -20,10 +19,13 @@ const Cart = () => {
         footer={<h2>Total: {cart?.totalPrice}$</h2>}
         renderItem={(item) => <CartItem item={item} />}
       />
-      {cart.totalPrice === 0? null:<Link to="/pay">
-        <Button >Buy</Button>
-      </Link> }
-      
+      {cart.totalPrice === 0 ? null : (
+        <Link to="/pay">
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button>Buy</Button>
+          </div>
+        </Link>
+      )}
     </div>
   );
 };
