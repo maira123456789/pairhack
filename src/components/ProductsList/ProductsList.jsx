@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { perfumesContext } from "../../context/perfumesContext";
 import ProductsCard from "./ProductsCard";
 import ErrorIcon from "@mui/icons-material/Error";
