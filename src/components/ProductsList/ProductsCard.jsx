@@ -17,6 +17,7 @@ import { useAuth } from "../../context/authContext";
 import { perfumesContext } from "../../context/perfumesContext";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { cartContext } from "../../context/cartContext";
+import "./ProductList.css"
 
 const ProductsCard = ({ item }) => {
   const { deletePerfume } = useContext(perfumesContext);
@@ -39,8 +40,8 @@ const ProductsCard = ({ item }) => {
   });
 
   return (
-    <div>
-      <Card sx={{ maxWidth: 300, margin: 1 }}>
+    <div >
+      <Card className="card" sx={{ maxWidth: 300, margin: 1 }}>
         <CardActionArea>
           <CardMedia
             component="img"

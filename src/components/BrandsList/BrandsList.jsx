@@ -24,6 +24,7 @@ const BrandsList = () => {
     >
       {brands.map((item) => (
         <Card
+        className="card"
           sx={{
             margin: 1,
             width: 200,
