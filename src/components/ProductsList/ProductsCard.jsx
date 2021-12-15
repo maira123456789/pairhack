@@ -10,14 +10,15 @@ import {
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import MoreIcon from "@mui/icons-material/More";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { perfumesContext } from "../../context/perfumesContext";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { cartContext } from "../../context/cartContext";
-import "./ProductList.css"
+import "./ProductList.css";
 
 const ProductsCard = ({ item }) => {
   const { deletePerfume } = useContext(perfumesContext);
@@ -40,7 +41,7 @@ const ProductsCard = ({ item }) => {
   });
 
   return (
-    <div >
+    <div>
       <Card className="card" sx={{ maxWidth: 300, margin: 1 }}>
         <CardActionArea>
           <CardMedia
@@ -64,14 +65,19 @@ const ProductsCard = ({ item }) => {
         <CardActions style={{ backgroundColor: "peachpuff" }}>
           <Link to={`/details/${item.id}`} style={{ textDecoration: "none" }}>
             <Button size="small" color="primary">
-              <MoreIcon />
+              <MoreHorizIcon />
             </Button>
           </Link>
+          
+            <Button>
+              <StarOutlineIcon />
+            </Button>
+          
 
           {email ? (
             <>
               <Button>
-                <ShoppingCartCheckoutIcon
+                <ShoppingCartOutlinedIcon
                   style={{
                     color: checkInCart ? "red" : "black",
                     fontSize: "25px",
@@ -84,7 +90,7 @@ const ProductsCard = ({ item }) => {
               </Button>
               <Button size="small" color="primary">
                 <h1>{count}</h1>
-                <FavoriteBorderIcon onClick={increment} />
+                <FavoriteBorderIcon onClick={()=>increment()} />
               </Button>
             </>
           ) : null}
