@@ -12,7 +12,7 @@ const Cart = () => {
     getCart();
   }, []);
   return (
-    <div style={{ paddingTop: "100px", marginBottom: "50px" }}>
+    <div style={{ paddingTop: "100px", marginBottom: "50px"}}>
       <List
         itemLayout="vertical"
         size="large"
@@ -21,7 +21,7 @@ const Cart = () => {
         renderItem={(item) => <CartItem item={item} />}
       />
       {cart.totalPrice === 0? null:<Link to="/pay">
-        <Button>Buy</Button>
+        <Button >Buy</Button>
       </Link> }
       
     </div>

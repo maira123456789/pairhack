@@ -6,6 +6,7 @@ import Cart from "./components/Cart/Cart";
 import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 import EditPerfume from "./components/EditPerfume/EditPerfume";
 import Home from "./components/Home/Home";
+import Invoic from "./components/Invoic/Invoic";
 import News from "./components/News/News";
 import Pay from "./components/Pay/Pay";
 import ProductsList from "./components/ProductsList/ProductsList";
@@ -62,6 +63,11 @@ const Routing = () => {
       link: "/pay",
       element: <Pay />,
       id: 8
+    },
+    {
+      link: "/invoic",
+      element: <Invoic />,
+      id: 9
     },
   ];
   const ADMIN_ROUTES = [
