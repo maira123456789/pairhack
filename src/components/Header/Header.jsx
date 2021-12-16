@@ -3,13 +3,21 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import { useAuth } from "../../context/authContext";
-import { Badge, Button, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper} from "@mui/material";
+import {
+  Badge,
+  Button,
+  ClickAwayListener,
+  Grow,
+  MenuItem,
+  MenuList,
+  Paper,
+  Popper,
+} from "@mui/material";
 
 import { cartContext } from "../../context/cartContext";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
-
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -26,10 +34,10 @@ const Header = () => {
   };
 
   function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
+    if (event.key === "Tab") {
       event.preventDefault();
       setOpen(false);
-    } else if (event.key === 'Escape') {
+    } else if (event.key === "Escape") {
       setOpen(false);
     }
   }
@@ -64,12 +72,7 @@ const Header = () => {
     {
       title: "STORES",
       link: "/stores",
-      id: 3,
-    },
-    {
-      title: "NEWS",
-      link: "/news",
-      id: 4,
+      id: 2,
     },
   ];
   return (
@@ -82,19 +85,18 @@ const Header = () => {
         />
       </Link>
 
-
-      <div className="burger"> 
+      <div className="burger">
         <Button
           ref={anchorRef}
           id="composition-button"
-          aria-controls={open ? 'composition-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
+          aria-controls={open ? "composition-menu" : undefined}
+          aria-expanded={open ? "true" : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
           variant="contained"
-          color="secondary"
+          color="warning"
         >
-          <MenuIcon/>
+          <MenuIcon />
         </Button>
         <Popper
           open={open}
@@ -109,7 +111,7 @@ const Header = () => {
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === 'bottom-start' ? 'left top' : 'left bottom',
+                  placement === "bottom-start" ? "left top" : "left bottom",
               }}
             >
               <Paper>
@@ -120,11 +122,20 @@ const Header = () => {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <Link to="/products?_limit=4&_page=1&q="><MenuItem onClick={handleClose}>Perfumes</MenuItem></Link>
-                    <Link to="/brands"><MenuItem onClick={handleClose}>Brands</MenuItem></Link>
-                    <Link to="/stores"><MenuItem onClick={handleClose}>Stores</MenuItem></Link>
-                    <Link to="/news"><MenuItem onClick={handleClose}>News</MenuItem></Link>
-                    {email === "tarieltairov1@gmail.com" ?(<Link to="/admin"><MenuItem onClick={handleClose}>Admin</MenuItem></Link>): null}
+                    <Link to="/products?_limit=4&_page=1&q=">
+                      <MenuItem onClick={handleClose}>Perfumes</MenuItem>
+                    </Link>
+                    <Link to="/brands">
+                      <MenuItem onClick={handleClose}>Brands</MenuItem>
+                    </Link>
+                    <Link to="/stores">
+                      <MenuItem onClick={handleClose}>Stores</MenuItem>
+                    </Link>
+                    {email === "tarieltairov1@gmail.com" ? (
+                      <Link to="/admin">
+                        <MenuItem onClick={handleClose}>Admin</MenuItem>
+                      </Link>
+                    ) : null}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -133,49 +144,56 @@ const Header = () => {
         </Popper>
       </div>
 
-
-
       <div className="links cont">
-      <Link className={
+        <Link
+          className={
             location.pathname === "/products"
               ? "navbar__item-active"
               : "navbar__item"
-          } to="/products?_limit=4&_page=1&q=">PERFUMES</Link>
-      {NAV_ITEMS.map((item, index) => (
-        <Link
-          key={index}
-          to={item.link + ''}
-          style={{ textDecoration: "none" }}
-          className={
-            location.pathname === item.link
-              ? "navbar__item-active"
-              : "navbar__item"
           }
+          to="/products?_limit=4&_page=1&q="
         >
-          {item.title}
+          PERFUMES
         </Link>
-      ))}
+        {NAV_ITEMS.map((item, index) => (
+          <Link
+            key={index}
+            to={item.link + ""}
+            style={{ textDecoration: "none" }}
+            className={
+              location.pathname === item.link
+                ? "navbar__item-active"
+                : "navbar__item"
+            }
+          >
+            {item.title}
+          </Link>
+        ))}
       </div>
 
-      <div className="links">{email === "tarieltairov1@gmail.com" ? (
-        <Link
-          className={
-            location.pathname === "/admin"
-              ? "navbar__item-active"
-              : "navbar__item"
-          }
-          to="/admin"
-          style={{ textDecoration: "none" }}
-        >
-          ADMIN
-        </Link>
-      ) : null}</div>
+      <div className="links">
+        {email === "tarieltairov1@gmail.com" ? (
+          <Link
+            className={
+              location.pathname === "/admin"
+                ? "navbar__item-active"
+                : "navbar__item"
+            }
+            to="/admin"
+            style={{ textDecoration: "none" }}
+          >
+            ADMIN
+          </Link>
+        ) : null}
+      </div>
 
-      {email?<Link to="/cart">
-        <Badge badgeContent={+cartLength} color="warning">
-          <ShoppingCartIcon className="cart" fontSize="large" />
-        </Badge>
-      </Link>: null}
+      {email ? (
+        <Link to="/cart">
+          <Badge badgeContent={+cartLength} color="warning">
+            <ShoppingCartIcon className="cart" fontSize="large" />
+          </Badge>
+        </Link>
+      ) : null}
       <div>
         {email ? (
           <Link to="/auth">

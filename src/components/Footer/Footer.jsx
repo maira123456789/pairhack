@@ -10,20 +10,21 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div className="back" onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>
+      <div
+        className="back"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         BACK TO TOP
       </div>
       <div className="main-footer">
         <div className="footer">
-          <h3>INFORMATION</h3>
+          <h3>CALL</h3>
           <br />
-          <a>Contact Us</a>
-          <a>Your Feedback</a>
-          <a>FAQ</a>
+          <span><a href="tel:+996704135830">+996704135830</a></span>
+          <span><a href="tel:+996552797222">+996552797222</a></span>
         </div>
         <div className="footer">
           <h3>CATEGORIES</h3>
-          <br />
           <br />
           <Link
             to="/products"

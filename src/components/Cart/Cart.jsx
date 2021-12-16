@@ -3,28 +3,23 @@ import { cartContext } from "../../context/cartContext";
 import { Modal, Button, List } from "antd";
 import "antd/dist/antd.css";
 import CartItem from "./CartItem";
-import { Form, Input, Select, Tooltip, Space, Typography } from "antd";
+import { Form, Input, Tooltip, Space, Typography } from "antd";
 import { Link } from "react-router-dom";
-import Invoic from "../Invoic/Invoic";
-import axios from "axios";
-
-const { Option } = Select;
-
 
 const Cart = () => {
-  const [newUser, setNewUser]= useState({
-    username: '',
-    provinсe: '',
-    street: '',
-    email: '',
-  })
+  const [newUser, setNewUser] = useState({
+    username: "",
+    provinсe: "",
+    street: "",
+    email: "",
+  });
 
-  function handleValues(e){
+  function handleValues(e) {
     let values = {
       ...newUser,
-      [e.target.name]: e.target.value
-    }
-    setNewUser(values)
+      [e.target.name]: e.target.value,
+    };
+    setNewUser(values);
   }
 
   function checkValues() {
@@ -37,8 +32,8 @@ const Cart = () => {
       alert("Please, fill in all fields!");
       return;
     } else {
-      localStorage.setItem('Cartinfo', JSON.stringify(newUser))
-      console.log(newUser)
+      localStorage.setItem("Cartinfo", JSON.stringify(newUser));
+      console.log(newUser);
     }
   }
 
@@ -74,20 +69,30 @@ const Cart = () => {
       />
 
       <>
-      <div style={{ display: "flex", flexDirection: 'column', justifyContent:'space-between', alignItems: 'center' , width: "100%", height: '100px' }}>
-        {" "}
-        {cart.totalPrice === 0 ? null : (
-          <Button type="primary" onClick={showModal} >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+            height: "100px",
+          }}
+        >
+          {" "}
+          {cart.totalPrice === 0 ? null : (
+            <Button type="primary" onClick={showModal}>
               Checkout
-          </Button>
-        )}
-        {cart.totalPrice === 0 ? null : (
-        <Link to="/pay">
-          <div >
-            <Button>Buy</Button>
-          </div>
-        </Link>
-      )}</div>
+            </Button>
+          )}
+          {cart.totalPrice === 0 ? null : (
+            <Link to="/pay">
+              <div>
+                <Button>Buy</Button>
+              </div>
+            </Link>
+          )}
+        </div>
         <Modal
           title="Paymound metod"
           visible={isModalVisible}
@@ -106,7 +111,12 @@ const Cart = () => {
                   noStyle
                   rules={[{ required: true, message: "Username is required" }]}
                 >
-                  <Input style={{ width: 160 }} placeholder="Please input" name="username" onChange={handleValues}/>
+                  <Input
+                    style={{ width: 160 }}
+                    placeholder="Please input"
+                    name="username"
+                    onChange={handleValues}
+                  />
                 </Form.Item>
                 <Tooltip title="Useful information">
                   <Typography.Link href="#API">Need Help?</Typography.Link>
@@ -119,7 +129,12 @@ const Cart = () => {
                   noStyle
                   rules={[{ required: true, message: "Provinсe is required" }]}
                 >
-                  <Input style={{ width: 160 }} placeholder="Please input" name="provinсe" onChange={handleValues}/>
+                  <Input
+                    style={{ width: 160 }}
+                    placeholder="Please input"
+                    name="provinсe"
+                    onChange={handleValues}
+                  />
                 </Form.Item>
                 <Tooltip title="Useful information">
                   <Typography.Link href="#API">Need Help?</Typography.Link>
@@ -132,24 +147,28 @@ const Cart = () => {
                   noStyle
                   rules={[{ required: true, message: "Street is required" }]}
                 >
-                  <Input style={{ width: 160 }} placeholder="Please input" name="street" onChange={handleValues}/>
+                  <Input
+                    style={{ width: 160 }}
+                    placeholder="Please input"
+                    name="street"
+                    onChange={handleValues}
+                  />
                 </Form.Item>
                 <Tooltip title="Useful information">
                   <Typography.Link href="#API">Need Help?</Typography.Link>
                 </Tooltip>
               </Space>
             </Form.Item>
-           
+
             <Form.Item label="Email">
               <Space>
                 <Form.Item
-                
                   noStyle
                   rules={[{ required: true, message: "Email is required" }]}
                 >
                   <Input
-                  onChange={handleValues}
-                  name="email"
+                    onChange={handleValues}
+                    name="email"
                     style={{ width: 160 }}
                     placeholder="Please input email"
                   />
@@ -160,11 +179,13 @@ const Cart = () => {
               </Space>
             </Form.Item>
             <Form.Item label=" " colon={false}>
-         
-                <Button onClick={()=>checkValues()} type="primary" htmlType="submit">
-                  submit
-                </Button>
-
+              <Button
+                onClick={() => checkValues()}
+                type="primary"
+                htmlType="submit"
+              >
+                submit
+              </Button>
             </Form.Item>
           </Form>
         </Modal>

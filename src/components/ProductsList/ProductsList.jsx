@@ -12,7 +12,6 @@ import { Pagination } from "antd";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import CloseIcon from "@mui/icons-material/Close";
 const ProductsList = () => {
-
   const { perfumes, getPerfumes, perfumesTotalCount } =
     useContext(perfumesContext);
   useEffect(() => {
@@ -56,39 +55,40 @@ const ProductsList = () => {
   useEffect(() => {
     getPerfumes();
   }, [searchParams]);
-  // useEffect(() => {
-  //   setSearchParams({
-  //     q: search,
-  //     _page: page,
-  //     _limit: limit,
-  //     brand: brand
-  //   });
-  //   getPerfumes();
-  // }, []);
 
   return (
     <div className="DIV">
-      {/* search */}
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '50px', paddingRight: "20px", paddingLeft: '20px'}}>
-      
-      {/* filtration */}
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <FilterListIcon />
-        <Filters brand={brand} setBrand={setBrand}/>
-        <Link to="/products?_limit=4&_page=1&q="><CloseIcon/></Link>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", paddingTop: '20px' }}>
-        <SearchIcon />
-        <TextField
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search..."
-          style={{backgroundColor:"lightyellow"}}
-        />
-      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "50px",
+          paddingRight: "20px",
+          paddingLeft: "20px",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <FilterListIcon />
+          <Filters brand={brand} setBrand={setBrand} />
+          <Link to="/products?_limit=4&_page=1&q=">
+            <CloseIcon />
+          </Link>
+        </div>
+        <div
+          style={{ display: "flex", alignItems: "center", paddingTop: "20px" }}
+        >
+          <SearchIcon />
+          <TextField
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search..."
+            style={{ backgroundColor: "lightyellow" }}
+          />
+        </div>
       </div>
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
       >
         {perfumes.length > 0 ? (
           perfumes.map((item) => <ProductsCard key={item.id} item={item} />)
@@ -96,7 +96,9 @@ const ProductsList = () => {
           <ErrorIcon />
         )}
       </div>
-      <div style={{ display: "flex", justifyContent: "center", marginTop: '50px' }}>
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}
+      >
         <Pagination
           onChange={(page, limit) => {
             setPage(page);
@@ -106,8 +108,7 @@ const ProductsList = () => {
           pageSize={+limit}
           defaultCurrent={1}
           total={+perfumesTotalCount}
-          style={{color: 'success'}}
-          
+          style={{ color: "success" }}
         />
       </div>
     </div>

@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { List, InputNumber, Button } from "antd";
-import { cartContext } from '../../context/cartContext'
+import { cartContext } from "../../context/cartContext";
 
 const CartItem = ({ item }) => {
-  
-  const { deleteFromCart, changeProductCount } = useContext(cartContext)
+  const { deleteFromCart, changeProductCount } = useContext(cartContext);
   return (
     <List.Item
       key={item.id}

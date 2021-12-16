@@ -3,7 +3,7 @@ import "./Stores.css";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 const Stores = () => {
   return (
-    <div
+    <div className="stores"
       style={{
         paddingTop: "150px",
         paddingBottom: "50px",

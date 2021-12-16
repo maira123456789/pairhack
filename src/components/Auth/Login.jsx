@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "../../context/authContext";
-import './Login.css'
+import "./Login.css";
 
 const Login = () => {
   const {
@@ -14,14 +14,14 @@ const Login = () => {
     setHasAccount,
     emailError,
     passwordError,
-    authWithGoogle
+    authWithGoogle,
   } = useAuth();
   return (
     <>
       <section className="login">
         <div className="login-container">
           <input
-          placeholder="👤E-mail"
+            placeholder="👤E-mail"
             className="auth-input"
             type="text"
             autoFocus
@@ -33,7 +33,7 @@ const Login = () => {
           />
           <p className="error-msg">{emailError}</p>
           <input
-          placeholder="🔒Password"
+            placeholder="🔒Password"
             className="auth-input"
             type="password"
             autoFocus
@@ -77,9 +77,15 @@ const Login = () => {
                 </p>
               </>
             )}
-
           </div>
-          <button style={{height: '30px'}} onClick={authWithGoogle}><img width="15px" src="https://www.tunartravel.com/img/google_logo.png" alt="" /> Sign in with google </button>
+          <button style={{ height: "30px" }} onClick={authWithGoogle}>
+            <img
+              width="15px"
+              src="https://www.tunartravel.com/img/google_logo.png"
+              alt=""
+            />{" "}
+            Sign in with google{" "}
+          </button>
         </div>
       </section>
     </>
