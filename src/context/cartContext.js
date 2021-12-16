@@ -31,6 +31,7 @@ const CartContextProvider = ({ children }) => {
         products: [],
         totalPrice: 0,
       };
+      localStorage.setItem('cart',JSON.stringify(cart))
     }
     let newProduct = {
       item: product,
@@ -47,6 +48,7 @@ const CartContextProvider = ({ children }) => {
     } else {
       cart.products.push(newProduct);
     }
+    console.log(cart)
     cart.totalPrice = calcTotalPrice(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart() //автоматически обновляет корзину
@@ -59,6 +61,7 @@ const CartContextProvider = ({ children }) => {
         totalPrice: 0,
       };
     }
+    console.log(cart)
     cart.totalPrice = calcTotalPrice(cart.products);
     dispatch({
       type: CASE_GET_CART,
