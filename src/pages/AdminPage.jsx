@@ -93,13 +93,25 @@ const AdminPage = () => {
     textAlign: "center",
   };
   return (
-    <div className="admin" style={{display:"flex", justifyContent:"center", alignItems:"center",paddingTop: "310px", paddingBottom: "210px"}}>
-      <div style={{margin:"10px" }}>
-        <Button onClick={handleOpen} variant="contained" style={{backgroundColor:"honeydew",color:"black"}}>
+    <div
+      className="admin"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: "310px",
+        paddingBottom: "210px",
+      }}
+    >
+      <div style={{ margin: "10px" }}>
+        <Button
+          onClick={handleOpen}
+          variant="contained"
+          style={{ backgroundColor: "honeydew", color: "black" }}
+        >
           Add Perfume
         </Button>
-        <Modal 
-         
+        <Modal
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
@@ -107,102 +119,106 @@ const AdminPage = () => {
         >
           <Box className="modal" sx={style}>
             <div className="items-list">
-            <h1>Add Perfumes</h1>
-            <TextField
-              label="Enter brand"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="brand"
-            />
-            <TextField
-              label="Enter model"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="model"
-            />
-            <TextField
-              label="Enter description"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="description"
-            />
-            <TextField
-              label="Enter price"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="price"
-              type="number"
-            />
-            <TextField
-              label="Enter url for image1"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="image1"
-            />
-            <TextField
-              label="Enter url for image2"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="image2"
-            />
-            <TextField
-              label="Enter male"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValues}
-              name="male"
-            />
-            <Button
-              variant="contained"
-              style={{ width: "150px", height: "40px" }}
-              onClick={() => checkValues()}
-            >
-              Add
-            </Button>
+              <h1>Add Perfumes</h1>
+              <TextField
+                label="Enter brand"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="brand"
+              />
+              <TextField
+                label="Enter model"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="model"
+              />
+              <TextField
+                label="Enter description"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="description"
+              />
+              <TextField
+                label="Enter price"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="price"
+                type="number"
+              />
+              <TextField
+                label="Enter url for image1"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="image1"
+              />
+              <TextField
+                label="Enter url for image2"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="image2"
+              />
+              <TextField
+                label="Enter male"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValues}
+                name="male"
+              />
+              <Button
+                variant="contained"
+                style={{ width: "150px", height: "40px" }}
+                onClick={() => checkValues()}
+              >
+                Add
+              </Button>
             </div>
           </Box>
         </Modal>
       </div>
       <div>
-        <Button onClick={handleOpenBrand} variant="contained" style={{backgroundColor:"mistyrose",color:"black"}}>
+        <Button
+          onClick={handleOpenBrand}
+          variant="contained"
+          style={{ backgroundColor: "mistyrose", color: "black" }}
+        >
           Add Brand
         </Button>
-        <Modal 
+        <Modal
           open={openBrand}
           onClose={handleCloseBrand}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box className="modal" sx={style}>
-          <div className="items-list">
-            <h1>Add Brand</h1>
-            <TextField
-              label="Enter brand"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValuesBrand}
-              name="brand"
-            />
-            <TextField
-              label="Enter logo URL"
-              variant="outlined"
-              className="inp-add"
-              onChange={handleValuesBrand}
-              name="logo"
-            />
-            <Button
-              variant="contained"
-              style={{ width: "150px", height: "40px" }}
-              onClick={() => checkValuesBrand()}
-            >
-              Add
-            </Button>
+            <div className="items-list">
+              <h1>Add Brand</h1>
+              <TextField
+                label="Enter brand"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValuesBrand}
+                name="brand"
+              />
+              <TextField
+                label="Enter logo URL"
+                variant="outlined"
+                className="inp-add"
+                onChange={handleValuesBrand}
+                name="logo"
+              />
+              <Button
+                variant="contained"
+                style={{ width: "150px", height: "40px" }}
+                onClick={() => checkValuesBrand()}
+              >
+                Add
+              </Button>
             </div>
           </Box>
         </Modal>

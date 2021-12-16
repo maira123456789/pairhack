@@ -1,72 +1,86 @@
 .login {
-    width: 100%;
-    min-height: 90vh;
-    background: peachpuff;
-    display: flex;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  
+  width: 100%;
+  min-height: 90vh;
+  background: url("https://marketplace.canva.com/EAEDjhPe2wM/1/0/1600w/canva-%D1%80%D0%B0%D0%B4%D1%83%D0%B3%D0%B0-%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%B5%D0%BD%D1%82%D0%BD%D1%8B%D0%B9-%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D0%B2%D1%8B%D0%B9-%D0%B8-%D1%81%D0%B8%D0%BD%D0%B8%D0%B9-zoom-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD-9z3hOYl4auA.jpg");
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #6a77c4;
+}
+
+.login-container {
+  padding: 60px;
+  margin: auto;
+  height: 450px;
+  min-width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #6a77c4;
+  border-radius: 10%;
+  background: url("https://png.pngtree.com/thumb_back/fh260/background/20201010/pngtree-delicate-cute-watercolor-background-image_407971.jpg");
+}
+
+.auth-btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #6a77c4;
+  background: peachpuff;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-image: linear-gradient(
+    to right,
+    #e7ecb2 0%,
+    #dac340 51%,
+    #baddd7 100%
+  );
+  background-size: 200% auto;
+  transition: 1s;
+}
+
+.auth-btn:hover {
+  background-position: right center;
+}
+
+.auth-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  padding: 10px;
+  letter-spacing: 2px;
+  border-radius: 5%;
+}
+
+.btn-container {
+  width: 100%;
+  padding: 24px 0;
+}
+
+.error-msg {
+  color: rgb(203, 19, 19);
+  font-size: 16px;
+}
+
+.auth-text {
+  margin: 14px 0 0 0;
+  text-align: right;
+  /* cursor: pointer; */
+}
+
+.auth-span {
+  color: rgb(162, 158, 43);
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: all 400ms ease-in-out;
+}
+
+@media all and (max-width: 380px) {
   .login-container {
-    padding: 60px;
-    margin: auto;
-    min-height: 400px;
-    min-width: 370px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid #4a4a4a;
-    border-radius: 10px;
-    background-color: #F2789F;
+    min-width: 320px;
   }
-  
-  .auth-btn {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 15px 0;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-    background: rgb(216, 211, 63);
-    cursor: pointer;
-    letter-spacing: 2px;
-  }
-  
-  .auth-input {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 19px;
-    padding: 10px;
-    letter-spacing: 2px;
-  }
-  
-  .btn-container {
-    width: 100%;
-    padding: 24px 0;
-  }
-  
-  .error-msg {
-    color: rgb(203, 19, 19);
-    font-size: 16px;
-  }
-  
-  .auth-text {
-    margin: 14px 0 0 0;
-    text-align: right;
-    /* cursor: pointer; */
-  }
-  
-  .auth-span {
-    color: rgb(162, 158, 43);
-    font-weight: 500;
-    cursor: pointer;
-    margin-left: 5px;
-    transition: all 400ms ease-in-out;
-  }
-  
-  @media all and (max-width: 380px){
-    .login-container{
-      min-width: 320px;
-    }
-  }
+}

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { perfumesContext } from '../../context/perfumesContext';
-import './DetailsProduct.css'
+import './DetailsProduct'
 
 const DetailsProduct = () => {
     const { id } = useParams();

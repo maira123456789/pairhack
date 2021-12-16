@@ -10,6 +10,7 @@ const Auth = () => {
         <div>
            {user ? <Home /> : <Login />}
         </div>
+        // если user есть переходит на Home, если нет то на Login
     );
 };
 
