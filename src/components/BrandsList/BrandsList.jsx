@@ -19,12 +19,10 @@ const BrandsList = () => {
     getBrands();
   }, []);
   return (
-    <div
-      className="brands"
-    >
+    <div className="brands">
       {brands.map((item) => (
         <Card
-        className="card"
+          className="card"
           sx={{
             margin: 1,
             width: 200,

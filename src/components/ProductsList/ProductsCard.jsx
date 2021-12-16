@@ -15,7 +15,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { perfumesContext } from "../../context/perfumesContext";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { cartContext } from "../../context/cartContext";
 import "./ProductList.css";
 
@@ -83,7 +83,7 @@ const ProductsCard = ({ item }) => {
               </Button>
               <Button size="small" color="primary">
                 <h1>{count}</h1>
-                <FavoriteBorderIcon onClick={()=>increment()} />
+                <FavoriteBorderIcon onClick={() => increment()} />
               </Button>
             </>
           ) : null}

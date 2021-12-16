@@ -55,19 +55,14 @@ const Routing = () => {
       id: 7,
     },
     {
-      link: "/news",
-      element: <News />,
-      id: 8,
-    },
-    {
       link: "/pay",
       element: <Pay />,
-      id: 9
+      id: 8,
     },
     {
       link: "/invoic",
       element: <Invoic />,
-      id: 10
+      id: 9,
     },
   ];
   const ADMIN_ROUTES = [

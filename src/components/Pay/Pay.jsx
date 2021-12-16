@@ -51,7 +51,6 @@ export default class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // const { issuer } = this.state;
     const formData = [...e.target.elements]
       .filter((d) => d.name)
       .reduce((acc, d) => {
@@ -65,14 +64,6 @@ export default class App extends React.Component {
 
   render() {
     const { name, number, expiry, cvc, focused, issuer } = this.state;
-
-    // function checkValues (state) {
-    //   if (!state.number || !state.name || !state.expiry || !state.cvc) {
-    //     alert("ENTER DATA");
-    //   } else {
-    //     alert("paid");
-    //   }
-    // };
 
     return (
       <div key="Payment" style={{ paddingTop: "111px" }}>
@@ -162,13 +153,6 @@ export default class App extends React.Component {
               </div>
             </form>
           </div>
-          {/* {formData && (
-            <div className="App-highlight">
-              {formatFormData(formData).map((d, i) => (
-                <div key={i}>{d}</div>
-              ))}
-            </div>
-          )} */}
           <hr style={{ margin: "30px 0" }} />
           <SupportedCards />
         </div>

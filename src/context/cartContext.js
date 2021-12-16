@@ -31,7 +31,7 @@ const CartContextProvider = ({ children }) => {
         products: [],
         totalPrice: 0,
       };
-      localStorage.setItem('cart',JSON.stringify(cart))
+      localStorage.setItem("cart", JSON.stringify(cart));
     }
     let newProduct = {
       item: product,
@@ -48,10 +48,10 @@ const CartContextProvider = ({ children }) => {
     } else {
       cart.products.push(newProduct);
     }
-    console.log(cart)
+    console.log(cart);
     cart.totalPrice = calcTotalPrice(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
-    getCart() //автоматически обновляет корзину
+    getCart(); //автоматически обновляет корзину
   }
   function getCart() {
     let cart = JSON.parse(localStorage.getItem("cart"));
@@ -61,7 +61,7 @@ const CartContextProvider = ({ children }) => {
         totalPrice: 0,
       };
     }
-    console.log(cart)
+    console.log(cart);
     cart.totalPrice = calcTotalPrice(cart.products);
     dispatch({
       type: CASE_GET_CART,
@@ -81,7 +81,8 @@ const CartContextProvider = ({ children }) => {
     getCart();
   }
 
-  function checkItemInCart(id) { //проверка добавлен ли товар
+  function checkItemInCart(id) {
+    //проверка добавлен ли товар
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
       cart = {
@@ -93,7 +94,8 @@ const CartContextProvider = ({ children }) => {
     return filteredCart.length > 0 ? true : false; // проверка есть ли такой элем в корзине
   }
 
-  function changeProductCount(count, id) { //количество элементов в корзине
+  function changeProductCount(count, id) {
+    //количество элементов в корзине
     if (count <= 0) {
       count = 1;
     }
