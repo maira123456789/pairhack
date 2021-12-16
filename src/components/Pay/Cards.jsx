@@ -61,15 +61,6 @@ export default class SupportedCards extends React.Component {
             expiry="10/20"
             cvc="737"
           />
-
-          <Card
-            name="John Smith"
-            number="**** **** **** 7048"
-            expiry="10/20"
-            cvc="737"
-            preview={true}
-            issuer="visa"
-          />
         </div>
       </div>
     );

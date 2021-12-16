@@ -12,7 +12,7 @@ const Filters = ({ brand, setBrand }) => {
 
   return (
     <div style={{ marginTop: "20px" }}>
-      <FormControl style={{width: '200px'}}>
+      <FormControl style={{width: '200px',backgroundColor:"lightyellow"}}>
         <InputLabel id="demo-simple-select-label">Brand</InputLabel>
         <Select
           labelId="demo-simple-select-label"

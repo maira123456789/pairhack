@@ -21,7 +21,7 @@ const Home = () => {
        
       </Carousel>
       <div className="home-image">
-        <img style={{height: '500px', width: "70%" }} src="https://images.milledcdn.com/2019-12-25/0UDQ_kMFCm99L57A/an6_N3dTCKLE.gif" alt="" />
+        <img style={{ width: "70%" }} src="https://images.milledcdn.com/2019-12-25/0UDQ_kMFCm99L57A/an6_N3dTCKLE.gif" alt="" />
       </div>
       <video
         className="vid"

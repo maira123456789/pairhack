@@ -74,7 +74,7 @@ const ProductsList = () => {
       {/* filtration */}
       <div style={{ display: "flex", alignItems: "center" }}>
         <FilterListIcon />
-        <Filters brand={brand} setBrand={setBrand} />
+        <Filters brand={brand} setBrand={setBrand}/>
         <Link to="/products?_limit=4&_page=1&q="><CloseIcon/></Link>
       </div>
       <div style={{ display: "flex", alignItems: "center", paddingTop: '20px' }}>
@@ -83,6 +83,7 @@ const ProductsList = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search..."
+          style={{backgroundColor:"lightyellow"}}
         />
       </div>
       </div>

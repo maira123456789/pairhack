@@ -11,7 +11,6 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
@@ -68,13 +67,7 @@ const ProductsCard = ({ item }) => {
               <MoreHorizIcon />
             </Button>
           </Link>
-          
-            <Button>
-              <StarOutlineIcon />
-            </Button>
-          
-
-          {email ? (
+          {email && email !== "tarieltairov1@gmail.com" ? (
             <>
               <Button>
                 <ShoppingCartOutlinedIcon
