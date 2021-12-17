@@ -13,9 +13,9 @@ const Stores = () => {
         paddingRight: "30px",
       }}
     >
-      <div style={{ width: "50%", paddingRight: "20px", paddingLeft: "20px" }}>
+      <div className="stores-div" style={{ width: "50%", paddingRight: "20px", paddingLeft: "20px" }}>
         <div style={{ textAlign: "center" }}>
-          <h1>Our stores in Bishkek </h1>
+          <h1 id="our">Our stores in Bishkek </h1>
           <ShoppingBagIcon color="secondary" fontSize="large" />
           <ShoppingBagIcon color="secondary" fontSize="large" />
           <ShoppingBagIcon color="secondary" fontSize="large" />

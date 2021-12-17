@@ -1,6 +1,7 @@
 .home-image {
   background: url("https://cstor.nn2.ru/blog/data/blog/2018-07/1587938_1530654817.jpg");
-  background-size: cover;
+  background-size:cover;
+  background-repeat: no-repeat;
   height: 700px;
   display: flex;
   justify-content: center;
