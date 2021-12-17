@@ -1,12 +1,12 @@
-.DIV{
-    background: url("https://montaleparfums.com/themes/montale/assets/img//paris_shop_1920x1150.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    padding-bottom: 50px;
-    padding-top: 100px;
+.DIV {
+  background: url("https://montaleparfums.com/themes/montale/assets/img//paris_shop_1920x1150.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 100px;
 }
 
-.card:hover{
-    box-shadow: 3px 3px 2px 2px rgb(194, 179, 179);
-    transition: 0.3s;
+.card:hover {
+  box-shadow: 3px 3px 2px 2px rgb(194, 179, 179);
+  transition: 0.3s;
 }

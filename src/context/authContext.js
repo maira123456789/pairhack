@@ -1,16 +1,19 @@
-import { useState, useEffect, useContext, createContext, useReducer } from "react";
-import fire from "../fire";
 import {
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
+  useState,
+  useEffect,
+  useContext,
+  createContext,
+  useReducer,
+} from "react";
+import fire from "../fire";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { aut } from "../fire";
 
 export const authContext = createContext();
 
-export const useAuth = ()=>{
-  return useContext(authContext)
-}     
+export const useAuth = () => {
+  return useContext(authContext);
+};
 const INIT_STATE = {
   googleUser: null,
 };
@@ -86,7 +89,6 @@ const AuthContextProvider = ({ children }) => {
       });
   };
 
-
   const handleLogout = () => {
     fire.auth().signOut();
   };
@@ -106,7 +108,6 @@ const AuthContextProvider = ({ children }) => {
     authListener();
   }, []);
 
-
   const values = {
     email,
     user,
@@ -121,7 +122,7 @@ const AuthContextProvider = ({ children }) => {
     emailError,
     passwordError,
     authWithGoogle,
-    googleUser: state.googleUser
+    googleUser: state.googleUser,
   };
 
   return <authContext.Provider value={values}>{children}</authContext.Provider>;

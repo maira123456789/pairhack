@@ -3,7 +3,8 @@ import "./Stores.css";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 const Stores = () => {
   return (
-    <div className="stores"
+    <div
+      className="stores"
       style={{
         paddingTop: "150px",
         paddingBottom: "50px",
@@ -13,7 +14,7 @@ const Stores = () => {
       }}
     >
       <div style={{ width: "50%", paddingRight: "20px", paddingLeft: "20px" }}>
-        <div style={{textAlign: 'center'}}>
+        <div style={{ textAlign: "center" }}>
           <h1>Our stores in Bishkek </h1>
           <ShoppingBagIcon color="secondary" fontSize="large" />
           <ShoppingBagIcon color="secondary" fontSize="large" />

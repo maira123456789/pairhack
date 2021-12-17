@@ -1,8 +1,8 @@
 .stores {
-    background: url("https://вебджем.рф/800/600/https/krot.info/uploads/posts/2020-01/1579380501_31-74.jpg");
-    background-size: cover;
-    height: 900px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+  background: url("https://вебджем.рф/800/600/https/krot.info/uploads/posts/2020-01/1579380501_31-74.jpg");
+  background-size: cover;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

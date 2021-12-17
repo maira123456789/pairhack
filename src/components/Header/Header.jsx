@@ -172,7 +172,7 @@ const Header = () => {
       </div>
 
       <div className="links">
-        {email === "tarieltairov1@gmail.com" ? (
+        {email === "maira@gmail.com" || email === "tarieltairov1@gmail.com" ? (
           <Link
             className={
               location.pathname === "/admin"
