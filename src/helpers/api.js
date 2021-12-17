@@ -1,3 +1,3 @@
-export const PERFUMES_API = "http://localhost:8000/perfumes";
+export const PERFUMES_API = "https://perfumes-deploy.herokuapp.com/apiproducts";
 
-export const BRANDS_API = "http://localhost:8000/brands";
+export const BRANDS_API = "https://perfumes-deploy.herokuapp.com/apibrands";
