@@ -1,5 +1,5 @@
 {
-  "perfumes": [
+  "apiperfumes": [
     {
       "brand": "Hermes",
       "model": "Terre d'Hermes",
@@ -271,7 +271,7 @@
       "id": 30
     }
   ],
-  "brands": [
+  "apibrands": [
     {
       "brand": "Hermes",
       "logo": "https://avatars.mds.yandex.net/get-zen_doc/1671180/pub_600c31e241733326eb002c9b_600c33a941733326eb03963d/scale_1200",
