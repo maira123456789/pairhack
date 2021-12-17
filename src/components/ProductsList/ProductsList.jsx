@@ -68,7 +68,8 @@ const ProductsList = () => {
           paddingLeft: "20px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{display:"flex",width:"100%",justifyContent:"space-between",flexWrap:"wrap"}}>
+          <div style={{ display: "flex", alignItems: "center" }}>
           <FilterListIcon />
           <Filters brand={brand} setBrand={setBrand} />
           <Link to="/products?_limit=4&_page=1&q=">
@@ -85,6 +86,7 @@ const ProductsList = () => {
             placeholder="Search..."
             style={{ backgroundColor: "lightyellow" }}
           />
+        </div>
         </div>
       </div>
       <div
