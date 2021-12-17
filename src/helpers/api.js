@@ -1,3 +1,3 @@
-export const PERFUMES_API = "https://perfumes-deploy.herokuapp.com/apiproducts";
+export const PERFUMES_API = "https://perfumes-deploy.herokuapp.com/apiperfumes";
 
 export const BRANDS_API = "https://perfumes-deploy.herokuapp.com/apibrands";
