@@ -24,7 +24,6 @@ export default class App extends React.Component {
     formData: null,
   };
 
-
   handleCallback = ({ issuer }, isValid) => {
     if (isValid) {
       this.setState({ issuer });
@@ -143,12 +142,9 @@ export default class App extends React.Component {
               <input type="hidden" name="issuer" value={issuer} />
               <div className="form-actions">
                 <Link to="/invoic">
-                <button
-                  type="submit"
-                  className="btn-pay"
-                >
-                  PAYYY
-                </button>
+                  <button type="submit" className="btn-pay">
+                    PAYYY
+                  </button>
                 </Link>
               </div>
             </form>

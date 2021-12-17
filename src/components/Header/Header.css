@@ -19,8 +19,8 @@
   font-size: 20px;
   font-weight: 500;
 }
-.navbar__item:hover{
-    color: cornsilk;
+.navbar__item:hover {
+  color: cornsilk;
 }
 .navbar__item-active {
   margin: 5px 15px;
@@ -29,12 +29,12 @@
   font-size: 20px;
   font-weight: 500;
 }
-.navbar__item-active:hover{
-    color: cornsilk;
-    border-bottom: 1px solid white;
+.navbar__item-active:hover {
+  color: cornsilk;
+  border-bottom: 1px solid white;
 }
 
-.sign-btn{
+.sign-btn {
   cursor: pointer;
   border: 1px gray solid;
   display: inline-block;
@@ -44,42 +44,47 @@
   padding: 15px 20px;
   margin: 10px 20px;
   border-radius: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-image: linear-gradient(to right, #e7ecb2 0%, #dac340 51%, #baddd7 100%);
+  background-image: linear-gradient(
+    to right,
+    #e7ecb2 0%,
+    #dac340 51%,
+    #baddd7 100%
+  );
   background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-  transition: .5s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
 }
 
-.sign-btn:hover{
+.sign-btn:hover {
   background-position: right center;
 }
 
-.cart{
+.cart {
   color: black;
 }
-.cart:hover{  
-color: cornsilk ;
+.cart:hover {
+  color: cornsilk;
 }
-.cont{
+.cont {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.burger{
+.burger {
   display: none;
 }
-.links{
+.links {
   display: block;
 }
 
-@media all and (max-width: 768px){
-  .burger{
+@media all and (max-width: 768px) {
+  .burger {
     display: block;
   }
-  .links{
+  .links {
     display: none;
   }
 }

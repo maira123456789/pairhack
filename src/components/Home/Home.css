@@ -1,11 +1,10 @@
 .home-image {
-    background: url("https://cstor.nn2.ru/blog/data/blog/2018-07/1587938_1530654817.jpg");
-    background-size: cover;
-    height: 700px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: black;
-    background-attachment: fixed;
+  background: url("https://cstor.nn2.ru/blog/data/blog/2018-07/1587938_1530654817.jpg");
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-attachment: fixed;
 }
-

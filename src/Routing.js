@@ -7,7 +7,6 @@ import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 import EditPerfume from "./components/EditPerfume/EditPerfume";
 import Home from "./components/Home/Home";
 import Invoic from "./components/Invoic/Invoic";
-import News from "./components/News/News";
 import Pay from "./components/Pay/Pay";
 import ProductsList from "./components/ProductsList/ProductsList";
 import Stores from "./components/Stores/Stores";
@@ -88,7 +87,7 @@ const Routing = () => {
               key={item.id}
               path={item.link}
               element={
-                user.email === "tarieltairov1@gmail.com" ? (
+                user.email === "tarieltairov1@gmail.com" || user.email === "maira@gmail.com" ? (
                   item.element
                 ) : (
                   <Navigate replace to="*" />

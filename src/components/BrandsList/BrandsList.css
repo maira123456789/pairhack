@@ -1,11 +1,11 @@
 .brands {
-    background: url("https://yakymour.files.wordpress.com/2021/02/guerlain-boutique-rue-saint-honore-03.jpg");
-    background-size: cover;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: black;
-    background-attachment: fixed;
-    flex-wrap: wrap;
-    padding: 100px;
+  background: url("https://yakymour.files.wordpress.com/2021/02/guerlain-boutique-rue-saint-honore-03.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-attachment: fixed;
+  flex-wrap: wrap;
+  padding: 100px;
 }
