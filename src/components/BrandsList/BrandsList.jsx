@@ -9,6 +9,7 @@ import React, { useContext, useEffect } from "react";
 import { useAuth } from "../../context/authContext";
 import { brandsContext } from "../../context/brandsContext";
 import "./BrandsList.css";
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 const BrandsList = () => {
   const {
@@ -22,7 +23,6 @@ const BrandsList = () => {
     <div className="brands">
       {brands.map((item) => (
         <Card
-          className="card"
           sx={{
             margin: 1,
             width: 200,
@@ -33,6 +33,7 @@ const BrandsList = () => {
         >
           <CardActionArea>
             <CardMedia
+            className="card"
               component="img"
               height="140"
               image={item.logo}
@@ -40,14 +41,14 @@ const BrandsList = () => {
             />
             <CardContent></CardContent>
           </CardActionArea>
-          {email === "tarieltairov1@gmail.com" ? (
+          {email === "tarieltairov1@gmail.com" || email === "maira@gmail.com" ? (
             <Button
               style={{ backgroundColor: "peachpuff", color: "black" }}
               onClick={() => deleteBrand(item.id)}
               size="small"
               color="primary"
             >
-              Delete
+              <DeleteOutlinedIcon/>
             </Button>
           ) : null}
         </Card>

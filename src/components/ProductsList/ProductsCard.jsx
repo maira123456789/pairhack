@@ -7,7 +7,6 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
@@ -25,12 +24,6 @@ const ProductsCard = ({ item }) => {
     user: { email },
   } = useAuth();
 
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(count + 1);
-  }
-
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
 
   const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
@@ -44,8 +37,9 @@ const ProductsCard = ({ item }) => {
       <Card className="card" sx={{ maxWidth: 300, margin: 1 }}>
         <CardActionArea>
           <CardMedia
+          style={{width:"250px"}}
             component="img"
-            height="190"
+            height="250"
             image={item.image1}
             alt="green iguana"
           />
@@ -81,14 +75,10 @@ const ProductsCard = ({ item }) => {
                   }}
                 />
               </Button>
-              <Button size="small" color="primary">
-                <h1>{count}</h1>
-                <FavoriteBorderIcon onClick={() => increment()} />
-              </Button>
             </>
           ) : null}
 
-          {email === "tarieltairov1@gmail.com" ? (
+          {email === "tarieltairov1@gmail.com" || email === "maira@gmail.com" ? (
             <Button
               size="small"
               color="primary"
@@ -97,7 +87,7 @@ const ProductsCard = ({ item }) => {
               <DeleteIcon />
             </Button>
           ) : null}
-          {email === "tarieltairov1@gmail.com" ? (
+          {email === "tarieltairov1@gmail.com" || email === "maira@gmail.com"  ? (
             <Link to={`/edit/${item.id}`} style={{ textDecoration: "none" }}>
               <Button size="small" color="primary">
                 <EditIcon />
